@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="my-background" stylesheets="@../Resources/Style00.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Student.StudentController">
+   <children>
+      <GridPane layoutX="216.0" layoutY="14.0" prefHeight="79.0" prefWidth="760.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Archivo seleccionado:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtPathSelectedFile" editable="false" focusColor="#08ff88" prefHeight="37.0" prefWidth="759.0" promptText="Ruta del archivo seleccionado" styleClass="color-text" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </GridPane>
+      <GridPane layoutY="25.0" prefHeight="550.0" prefWidth="200.0" styleClass="my-background">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="130.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblUsername" alignment="CENTER" prefHeight="80.0" prefWidth="200.0" text="Username" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnAbrirArchivo" onAction="#openFileChooser" prefHeight="60.0" prefWidth="200.0" ripplerFill="#08ff88" text="Abrir archivo" textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnSubirArchivo" onAction="#subirArchivoAlRepositorio" prefHeight="60.0" prefWidth="200.0" ripplerFill="#08ff88" text="Subir archivo" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDescargarArchivo" onAction="#downloadFileToLocal" prefHeight="60.0" prefWidth="200.0" ripplerFill="#08ff88" text="Descargar archivo" textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnCerrarSesion" onAction="#btnCerrarSesionAction" prefHeight="60.0" prefWidth="200.0" ripplerFill="#08ff88" text="Cerrar sesión" textFill="WHITE" GridPane.rowIndex="6">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="lblFechaEvire" alignment="CENTER" prefHeight="17.0" prefWidth="200.0" text="Evire Project, 2017 " textFill="WHITE" GridPane.rowIndex="7">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnCambiarPassword" onAction="#changePassword" prefHeight="60.0" prefWidth="200.0" ripplerFill="#08ff88" text="Cambiar contraseña" textFill="WHITE" GridPane.rowIndex="5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnEliminarArchivo" onAction="#deleteFileFromDB" prefHeight="60.0" prefWidth="200.0" ripplerFill="#08ff88" text="Eliminar archivo" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </GridPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#08ff88" height="550.0" layoutX="200.0" layoutY="26.0" stroke="TRANSPARENT" strokeType="INSIDE" width="4.0" />
+      <GridPane layoutX="216.0" layoutY="104.0" prefHeight="79.0" prefWidth="760.0">
+         <children>
+            <Label text="Mis datos" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtNumeroControl" editable="false" focusColor="#08ff88" prefHeight="37.0" prefWidth="285.0" promptText="Número de Control" styleClass="color-text" GridPane.rowIndex="1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmbMateria" focusColor="#24cc6a" prefHeight="37.0" prefWidth="280.0" promptText="-- Seleccione su materia --" styleClass="custome-text-size" stylesheets="@../Resources/Style00.css" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <JFXComboBox fx:id="cmbSemestre" focusColor="#24cc6a" onAction="#fillCmbMateriaBySemestre" prefHeight="37.0" prefWidth="280.0" promptText="-- Seleccione su semestre --" styleClass="custome-text-size" stylesheets="@../Resources/Style00.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane layoutX="216.0" layoutY="200.0" prefHeight="37.0" prefWidth="500.0">
+         <children>
+            <JFXTextField fx:id="txtNombreArchivo" focusColor="#08ff88" prefHeight="37.0" prefWidth="500.0" promptText="Nombre del archivo (Opcional)" styleClass="color-text">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane layoutX="216.0" layoutY="252.0" prefHeight="323.0" prefWidth="760.0">
+         <children>
+            <Label text="Archivo subidos" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXListView fx:id="listaArchivos" onMouseClicked="#selectedFileFromList" prefHeight="105.0" prefWidth="760.0" GridPane.rowIndex="1" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="156.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="286.0" minHeight="10.0" prefHeight="286.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

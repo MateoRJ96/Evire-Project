@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 27, 2017, 6:12:45 PM
+    Author     : Mateo
+*/
+
+.my-background{
+	-fx-background-color: #323232;
+}
+
+.bg-btn-green-lighten{
+	-fx-background-color: rgba(8, 255, 136, 0.35);
+}
+
+.color-text{
+	-fx-text-fill: #e4e4e4;
+}
+
+.custome-text-size{
+    -fx-font: 16px "System";
+}
+
+.combo-box .cell{
+    -fx-text-fill: white;
+    -fx-font: 16px "System";
+}
+
+.combo-box .list-view .list-cell{
+    -fx-text-fill: #323232;
+}
+
+/*
+.combo-box-popup .list-view .list-cell:hover{
+    -fx-background-color: #08ff88;    
+}
+
+.combo-box-popup .cell:selected{
+    -fx-background-color: #08ff88;    
+}*/
+
+.list-view .list-cell{       
+    -fx-font: 16px "System";
+}

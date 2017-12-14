@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="415.0" prefWidth="290.0" style="-fx-text-fill: #fff;" styleClass="my-background" stylesheets="@../Resources/Style00.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Login.LoginController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="70.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/evire.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtUsername" focusColor="#08ff88" layoutX="26.0" layoutY="200.0" prefHeight="37.0" prefWidth="238.0" promptText="Nombre de usuario" styleClass="color-text">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" focusColor="#08ff88" layoutX="27.0" layoutY="261.0" prefHeight="37.0" prefWidth="238.0" promptText="Contraseña" styleClass="color-text">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton fx:id="btnIniciarSesion" onAction="#btnIniciarSesionAction" layoutX="48.0" layoutY="346.0" prefHeight="37.0" prefWidth="195.0" ripplerFill="#5effb1" styleClass="bg-btn-green-lighten" text="Iniciar Sesión" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnClose" layoutX="249.0" layoutY="9.0" onAction="#btnCloseAction" prefHeight="30.0" prefWidth="30.0" text="X" textFill="#c3b3b3">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

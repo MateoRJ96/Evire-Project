@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="613.0" prefWidth="1127.0" styleClass="my-background" stylesheets="@../Resources/Style00.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Teacher.TeacherController">
+   <children>
+      <GridPane layoutX="30.0" maxWidth="200.0" minWidth="200.0" prefHeight="587.0" prefWidth="200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="96.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="62.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblUsername" alignment="CENTER" contentDisplay="CENTER" prefHeight="110.0" prefWidth="200.0" text="Username" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFechaEvire" alignment="CENTER" prefHeight="54.0" prefWidth="200.0" text="Evire Project, 2017" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.rowIndex="8">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbSemestre" focusColor="#24cc6a" onAction="#fillCmbMateriaBySemestre" prefHeight="32.0" prefWidth="201.0" promptText="Semestre" styleClass="custome-text-size" stylesheets="@../Resources/Style00.css" GridPane.rowIndex="1" />
+            <JFXComboBox fx:id="cmbMateria" focusColor="#24cc6a" prefHeight="32.0" prefWidth="200.0" promptText="Materia" styleClass="custome-text-size" GridPane.rowIndex="2" />
+            <JFXTextField fx:id="txtNumeroControl" alignment="CENTER" focusColor="#08ff88" promptText="Número de control" styleClass="color-text" GridPane.rowIndex="3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnDescargar" alignment="CENTER" onAction="#downloadFileToLocal" prefHeight="56.0" prefWidth="200.0" ripplerFill="#08ff88" text="Descargar" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnCerrarSesion" alignment="CENTER" onAction="#btnCerrarSesionAction" prefHeight="56.0" prefWidth="200.0" ripplerFill="#08ff88" text="Cerrar sesión" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="6">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnAplicarFiltro" alignment="CENTER" onAction="#fillListFiles" prefHeight="56.0" prefWidth="200.0" ripplerFill="#08ff88" text="Aplicar filtro" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnCambiarContraseña" alignment="CENTER" onAction="#changePassword" prefHeight="56.0" prefWidth="200.0" ripplerFill="#08ff88" text="Cambiar contraseña" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="7">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </GridPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#08ff88" height="563.0" layoutX="260.0" layoutY="23.0" stroke="TRANSPARENT" strokeType="INSIDE" width="4.0" />
+      <Label alignment="CENTER" layoutX="278.0" layoutY="23.0" text="Lista de alumnos" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXListView fx:id="listaArchivos" layoutX="278.0" layoutY="319.0" onMouseClicked="#selectedFileFromList" prefHeight="268.0" prefWidth="817.0" />
+      <JFXListView fx:id="listaAlumnos" layoutX="278.0" layoutY="53.0" onMouseClicked="#selectedStudentFromList" prefHeight="226.0" prefWidth="817.0" />
+      <Label alignment="CENTER" layoutX="278.0" layoutY="286.0" text="Archivos del alumno" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
